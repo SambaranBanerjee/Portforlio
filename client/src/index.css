@@ -1,0 +1,10 @@
+/**This is the global styles file for the portfolio website */
+/**The background color for each page should be same and it should be #0f1624 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f1624; /* Global background color */
+  color: white; /* Default text color */
+}
+
