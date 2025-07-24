@@ -1,5 +1,3 @@
-/**The navbar component styles, the h1 be at the leftmost corner while the other elements are aligned to the right */
-/**Also, the color of links should be white and the background of the navbar should be transparent */
 nav {
   display: flex;
   justify-content: space-between;
@@ -9,10 +7,17 @@ nav {
 }
 
 nav h1 {
-  color: white;
-  font-size: 24px;
   margin: 0;
+  font-size: 32px;
 }
+
+/* Style the link inside h1 */
+nav h1 a {
+  color: white;
+  text-decoration: none; /* removes underline */
+}
+
+/* Navigation links */
 nav .nav-links {
   display: flex;
   gap: 20px;
@@ -21,9 +26,12 @@ nav .nav-links {
 nav .nav-links a {
   color: white;
   text-decoration: none;
-}
-nav .nav-links a:hover {
-  /** No underline on hover */
-  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+nav .nav-links a:hover {
+  cursor: pointer;
+  color: #ddd; /* optional hover color */
+  text-decoration: underline ;
+}

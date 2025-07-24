@@ -1,0 +1,117 @@
+.Project-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.Project-left {
+  width: 40%;
+  font-size: 1.2rem;
+  color: #ded8d8;
+  padding-right: 40px;
+}
+
+.Project-right {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 3D Scene */
+.cube-scene {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+/* Cube Container */
+.cube {
+  animation: rotateCube 10s infinite linear;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cube:hover {
+  animation-play-state: paused;
+}
+/* Front Face (Add more faces if needed) */
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(150px); /* half of cube width */
+}
+
+/* Project Card */
+.project-card {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: scale(0.95);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 8px;
+  flex-grow: 1;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.project-buttons a {
+  padding: 10px 16px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #8e60d5, #27a1cb);
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.project-buttons a:hover {
+  background: linear-gradient(135deg, #6a4bbd, #2191b3);
+}
+
+/* Cube Rotation Animation */
+@keyframes rotateCube {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}

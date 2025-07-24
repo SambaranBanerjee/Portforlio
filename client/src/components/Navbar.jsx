@@ -4,13 +4,13 @@ export default function Navbar() {
   return (
     <nav>
         <h1>
-            <Link to="/">Sambaran Banerjee</Link>
+            <Link to="/">S B Portfolio</Link>
         </h1>
         <div className="nav-links">
             <Link to="/about">About</Link>
             <Link to="/skills">Skills & Tools</Link>
             <Link to="/projects">Projects</Link>
-            <Link to="/experience">Experience</Link>
+            {/*<Link to="/experience">Experience</Link>*/}
             <Link to="/contact">Contact</Link>
         </div>
     </nav>
