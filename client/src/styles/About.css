@@ -1,0 +1,63 @@
+/* Ensure no scrollbars appear unless needed */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent unnecessary scrolls */
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.about-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.about-left {
+  flex: 1;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-heading h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* White text */
+}
+
+.about-detail h3 {
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #b0b0b0; /* Light grey */
+  line-height: 1.6;
+}
+
+.about-left button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #8e60d5, #27a1cb); /* Diagonal gradient */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-left button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
