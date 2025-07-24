@@ -1,29 +1,50 @@
-//import React, { useEffect, useState } from 'react';
-import '../styles/Project.css';
+import { useEffect, useState } from "react";
+import fetchProjects from "../api/fetchProjects";
+import "../styles/Project.css";
 
-export default function ProjectCube() {
-  //const [projects, setProjects] = useState([]);
+export default function Projects() {
+  const [projects, setProjects] = useState([]);
 
-  {/*useEffect(() => {
-    fetch('http://localhost:5000/api/projects')
-      .then(res => res.json())
-      .then(data => setProjects(data))
-      .catch(err => console.error(err));
-  }, []);*/}
+  useEffect(() => {
+    const getProjects = async () => {
+      const data = await fetchProjects();
+      setProjects(data);
+    };
+    getProjects();
+  }, []);
 
   return (
-    <div className="cube-container">
-      <div className="cube">
-        {/*{projects.length > 0 && (
-          <div className="cube-face front">
-            <img src={projects[0].imageUrl} alt="thumbnail" />
-            <h3>{projects[0].title}</h3>
-            <p>{projects[0].description}</p>
-            <a href={projects[0].liveLink} target="_blank" rel="noopener noreferrer">Live Preview</a>
-            <a href={projects[0].githubLink} target="_blank" rel="noopener noreferrer">GitHub Code</a>
+    <div className="Project-page">
+      <div className="Project-left">
+        <p>
+          These are some of the projects I have done individually or with my team.
+          They include Full Stack projects in domains like Healthcare, Education,
+          Games, etc.
+        </p>
+      </div>
+
+      <div className="Project-right">
+        <div className="cube-container">
+          <div className="cube">
+            {projects.slice(0, 6).map((project, idx) => (
+              <div key={idx} className={`face face${idx + 1}`}>
+                <div className="project-card">
+                  <img src={project.thumbnail} alt={project.title} />
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="btns">
+                    <a href={project.liveLink} target="_blank" rel="noreferrer">
+                      <button className="btn-live">Live Preview</button>
+                    </a>
+                    <a href={project.githubLink} target="_blank" rel="noreferrer">
+                      <button className="btn-code">GitHub Code</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        )}*/}
-        {/* You can add back, left, right, top, bottom faces if needed */}
+        </div>
       </div>
     </div>
   );

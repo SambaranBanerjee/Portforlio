@@ -1,0 +1,88 @@
+
+.admin-form-wrapper {
+  max-width: 600px;
+  max-height: 100vh;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form button {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.admin-form-wrapper h2{
+    color: #000;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.admin-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-form button:hover {
+  background-color: #0056b3;
+}
+
+.image-preview {
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.admin-form-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.admin-form-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.admin-form-wrapper::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.admin-form-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3;
+}
+
+
+@media (max-width: 600px) {
+  .admin-form-wrapper {
+    padding: 20px;
+    margin: 20px;
+  }
+}

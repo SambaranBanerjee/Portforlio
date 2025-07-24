@@ -1,0 +1,80 @@
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.login-container {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  text-align: center;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px 14px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #2ebf91;
+  box-shadow: 0 0 5px rgba(46, 191, 145, 0.5);
+}
+
+.login-container button {
+  margin-top: 10px;
+  background: #2ebf91;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.login-container button:hover {
+  background: #249b78;
+  transform: scale(1.02);
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 0.9em;
+  margin-top: -4px;
+  margin-bottom: 10px;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0px); }
+}
