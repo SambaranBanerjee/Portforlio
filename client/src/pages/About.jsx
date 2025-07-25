@@ -20,9 +20,14 @@ export default function About(){
                         Let’s connect — I’m always open to exciting collaborations and opportunities to grow!
                     </h3>
                 </div>
-                <button onClick={DownloadCV}>
-                    Download CV
-                </button>
+                <div className="cv-buttons">
+                    <a href="/Sambaran_Banerjee_Internship_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                        <button className="btn-view">View CV</button>
+                    </a>
+                    <a href="/Sambaran_Banerjee_Internship_Resume.pdf" download onClick={() => alert("Your CV download will begin shortly.")}>
+                        <button className="btn-download">Download CV</button>
+                    </a>
+                </div>
             </div>
             <div className="about-right">
                 <Photo/>

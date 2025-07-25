@@ -15,7 +15,7 @@
 }
 
 .project-card {
-  background: #fff;
+  background: linear-gradient(135deg, #27a1cb,#ffffff);
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   padding: 16px;
@@ -40,11 +40,12 @@
 
 .project-card h3 {
   margin: 0 0 8px;
+  color: #000000;
 }
 
 .project-card p {
   font-size: 0.9rem;
-  color: #555;
+  color: #000000;
   flex-grow: 1;
 }
 

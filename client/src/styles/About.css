@@ -61,3 +61,32 @@ body, html {
   align-items: center;
   overflow: hidden;
 }
+.cv-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cv-buttons button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv-buttons .btn-view {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.cv-buttons .btn-download {
+  background-color: #10b981;
+  color: white;
+}
+
+.cv-buttons button:hover {
+  transform: scale(1.05);
+}

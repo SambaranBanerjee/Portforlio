@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="contact-card">
         <div className="contact-item">
           <FaPhoneAlt className="icon" />
-          <span>+91-9876543210</span>
+          <span>+91-6295867621</span>
         </div>
 
         <div className="contact-item">
