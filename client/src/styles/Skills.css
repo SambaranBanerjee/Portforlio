@@ -24,6 +24,20 @@
   transform: translateY(-6px);
 }
 
+.skills-card li:hover {
+  color: #6a11cb;
+  cursor: pointer;
+}
+
+.skills-card svg {
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.skills-card li:hover svg {
+  transform: scale(1.2);
+}
+
 .skills-card h2 {
   font-size: 1.6rem;
   margin-bottom: 24px;
